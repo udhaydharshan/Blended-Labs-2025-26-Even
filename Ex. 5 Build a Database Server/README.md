@@ -2,9 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
+* **Name**: UDHAYDHARSHAN S
+* **Register Number**: 212225230286
+
 
 ---
 
@@ -82,13 +82,16 @@ Test the database server by connecting to it locally or remotely and performing 
 
 ## Workflow (Student Explanation)
 
-(Write the steps you followed in your own words)
+First, I opened the AWS Management Console and went to the VPC service. I created a new security group named DB Security Group and configured it to allow MySQL (port 3306) access from the Web Security Group.
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+Next, I navigated to the RDS service and created a DB Subnet Group named DB-Subnet-Group. I selected the Lab VPC, chose two availability zones (us-east-1a and us-east-1b), and added the required subnets (10.0.1.0/24 and 10.0.3.0/24).
+
+After that, I created a new Amazon RDS MySQL database instance. I selected Dev/Test template, enabled Multi-AZ deployment, and configured details like DB identifier (lab-db), username (main), and password (lab-password). I also selected db.t3.micro instance type and attached the DB Security Group.
+
+Once the database was created, I waited until its status became available and then copied the endpoint URL from the connectivity section.
+
+Finally, I opened the web application using the provided EC2 IP address, navigated to the RDS section, and entered the database details (endpoint, database name, username, password). After submitting, I successfully connected the app and tested it by adding and managing contacts in the address book.
+
 
 ---
 
@@ -96,19 +99,27 @@ Test the database server by connecting to it locally or remotely and performing 
 
 ### Screenshot 1: EC2 Instance for Database Server
 
-(Insert Screenshot Here)
+<img width="1257" height="552" alt="image" src="https://github.com/user-attachments/assets/e5409fe5-9cf5-46dd-ab62-882c1fe7425c" />
+
 
 ---
 
 ### Screenshot 2: Database Service Running
 
-(Insert Screenshot Here)
+
+<img width="1262" height="557" alt="image" src="https://github.com/user-attachments/assets/fdc55953-00dd-4eb6-9d01-88324cacd4cf" />
+
+<img width="1267" height="556" alt="image" src="https://github.com/user-attachments/assets/355c1900-2370-4617-bbb0-7bc075dcf90b" />
 
 ---
 
 ### Screenshot 3: Sample Database and Table
 
-(Insert Screenshot Here)
+
+<img width="1130" height="590" alt="image" src="https://github.com/user-attachments/assets/6364c67d-17db-4b5a-ac3d-72cc4f9e349f" />
+
+<img width="1142" height="542" alt="image" src="https://github.com/user-attachments/assets/31fc2295-9a1b-48a8-b1c2-c87fbee82218" />
+
 
 ---
 
